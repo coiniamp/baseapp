@@ -1,0 +1,7 @@
+{
+  "name": "SimpleDex",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
