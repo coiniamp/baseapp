@@ -46,7 +46,7 @@ export interface DropdownComponentProps {
 
 
 /**
- *  Cryptobase Dropdown that overrides default dropdown with list of options.
+ *  Coiniamp Dropdown that overrides default dropdown with list of options.
  */
 
 export const DropdownComponent = (props: DropdownComponentProps) => {

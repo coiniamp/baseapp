@@ -77,7 +77,7 @@ export interface TableProps {
 }
 
 /**
- * Cryptobase Table overrides default table
+ * Coiniamp Table overrides default table
  */
 export const Table: React.FC<TableProps> = (props: TableProps) => {
     const { formatMessage } = useIntl();

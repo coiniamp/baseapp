@@ -53,7 +53,7 @@ const defaultSelected = {
 }
 
 /**
- *  Cryptobase Dropdown that overrides default dropdown with list of options.
+ *  Coiniamp Dropdown that overrides default dropdown with list of options.
  */
 
 export const DropdownBeneficiary = (props: DropdownBeneficiaryProps) => {

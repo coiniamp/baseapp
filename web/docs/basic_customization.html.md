@@ -89,7 +89,7 @@ Now let’s replace favicon.ico:
 To edit title of the webpage we have to change it in two files:
 
 ```bash
-# open index.html and edit 'Cryptobase' name between <title> tag
+# open index.html and edit 'Coiniamp' name between <title> tag
 cd /home/app/baseapp/public
 vim index.html
 
@@ -97,7 +97,7 @@ vim index.html
 <html lang="en">
   <head>
     ...
-    <title>Cryptobase</title>  // change name here
+    <title>Coiniamp</title>  // change name here
 </head>
 
 # this is the folder where React application constants stored
@@ -106,7 +106,7 @@ cd /home/app/baseapp/src/constants
 # open index.ts file and edit PG_TITLE_PREFIX constant
 vim index.ts
 
-export const PG_TITLE_PREFIX = 'Cryptobase'; // change name here
+export const PG_TITLE_PREFIX = 'Coiniamp'; // change name here
 ```
 
 And that’s it, now you have your frontend with your own logo, favicon and title.

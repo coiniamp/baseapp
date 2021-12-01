@@ -1,4 +1,4 @@
-import { Cryptobase, defaultStorageLimit } from '../../../api';
+import { Coiniamp, defaultStorageLimit } from '../../../api';
 import { getTimezone, setTimezone } from '../../../helpers/timezone';
 import { CommonError } from '../../types';
 import { PublicTrade } from '../../user/history';
@@ -131,13 +131,13 @@ describe('recentTrade reducer', () => {
             list,
         };
         const initialLimit = defaultStorageLimit();
-        Cryptobase.config.storage.defaultStorageLimit = 2;
+        Coiniamp.config.storage.defaultStorageLimit = 2;
         expect(recentTradesReducer(initialState, recentTradesData(fakeTrades))).toEqual({
             loading: false,
             list: fakeTrades,
             lastTrade: extendTradeWithPriceChange(fakeTrades[0], fakeTrades[1]),
         });
-        Cryptobase.config.storage.defaultStorageLimit = initialLimit;
+        Coiniamp.config.storage.defaultStorageLimit = initialLimit;
 
     });
 
@@ -175,13 +175,13 @@ describe('recentTrade reducer', () => {
             lastTrade: extendTradeWithPriceChange(list[0], list[1]),
         };
         const initialLimit = defaultStorageLimit();
-        Cryptobase.config.storage.defaultStorageLimit = 2;
+        Coiniamp.config.storage.defaultStorageLimit = 2;
         expect(recentTradesReducer(initialState, recentTradesPush({ trades: fakeTradeEvents, market: 'bchbtc' }))).toEqual({
             loading: false,
             list: fakeTradesAdjusted,
             lastTrade: extendTradeWithPriceChange(fakeTradesAdjusted[0], fakeTradesAdjusted[1]),
         });
-        Cryptobase.config.storage.defaultStorageLimit = initialLimit;
+        Coiniamp.config.storage.defaultStorageLimit = initialLimit;
 
     });
 
